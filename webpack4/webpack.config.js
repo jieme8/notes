@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require("extract-text-webpack-plugin");   //生成html
+const HtmlWebpackPlugin = require("html-webpack-plugin");   //生成html
+const ExtractTextWebapckPlugin = require("extract-text-webpack-plugin"); //css单独文件
 module.exports = {
     entry:{
         "list":"./src/list/index.js",
@@ -10,29 +11,63 @@ module.exports = {
         path: path.resolve(__dirname,'dist'),
         filename:'[name].js'
     },
-
+    module:{
+        rules: [
+            {
+                test:/\.css$/,
+                // loader:'style-loader!css-loader'
+                use:ExtractTextWebapckPlugin.extract({
+                    use:['css-loader']
+                })//不再需要style-loader
+            },
+            {
+                test: /\.js/,
+                use: {
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ["env", "stage-0"]
+                    }
+                }
+            }
+        ]
+    },
     plugins: [
         new webpack.LoaderOptionsPlugin({
           // test: /\.xxx$/, // may apply this only for some modules
           options: {
-            rules: [
-                {
-                    test:/\.css$/,
-                    loader:'style-loader!css-loader'
-                }
-            ]
+            // rules: [
+            //     {
+            //         test:/\.css$/,
+            //         // loader:'style-loader!css-loader'
+            //         use:ExtractTextWebapckPlugin.extract({
+            //             use:['css-loader']
+            //         })//不再需要style-loader
+            //     },
+            //     {
+            //         test: /\.js/,
+            //         use: {
+            //             loader: 'babel-loader',
+            //             query: {
+            //                 presets: ["env", "stage-0"]
+            //             }
+            //         }
+            //     }
+            // ]
           }
         }),
+        //css文件分离
+        new ExtractTextWebapckPlugin('[name].css'),
         //产出html
 
         new HtmlWebpackPlugin({
-            template: "./src/index.html",//模板
+            template: "./src/info/index.html",//模板
             filename:'index.html',
             hash:true,//防止缓存
             minify:{
                 removeAttributeQuotes:true//压缩 去掉引号
             }
         })
+        
     ],
     devServer:{//配置此静态文件服务器，可以用来预览打包后项目
         contentBase:path.resolve(__dirname,'dist'),//开发服务运行时的文件根目录
