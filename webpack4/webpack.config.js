@@ -32,29 +32,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.LoaderOptionsPlugin({
-          // test: /\.xxx$/, // may apply this only for some modules
-          options: {
-            // rules: [
-            //     {
-            //         test:/\.css$/,
-            //         // loader:'style-loader!css-loader'
-            //         use:ExtractTextWebapckPlugin.extract({
-            //             use:['css-loader']
-            //         })//不再需要style-loader
-            //     },
-            //     {
-            //         test: /\.js/,
-            //         use: {
-            //             loader: 'babel-loader',
-            //             query: {
-            //                 presets: ["env", "stage-0"]
-            //             }
-            //         }
-            //     }
-            // ]
-          }
-        }),
+
         //css文件分离
         new ExtractTextWebapckPlugin('[name].css'),
         //产出html
@@ -62,6 +40,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/info/index.html",//模板
             filename:'index.html',
+            // chunks:['index'],
             hash:true,//防止缓存
             minify:{
                 removeAttributeQuotes:true//压缩 去掉引号
