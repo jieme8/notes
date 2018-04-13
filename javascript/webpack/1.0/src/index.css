@@ -1,0 +1,28 @@
+.rewards{ background: #fff; }
+
+.rewards-info{padding:20px 3%;color:#666;position:relative;}
+.rewards-info .price{color:#333;font-size:24px;font-weight:700;vertical-align:middle;}
+.rewards-info .btn{width:58px;height:18px;line-height:18px;border:1px solid #ff608e;border-radius:3px;color:#ff608e;display:block;text-align:center;position:absolute;top:24px;right:3%;}
+
+.rewards-list{padding:0 3%;}
+.rewards-list li{border-top:1px solid #e6e6e6;padding:12px 0;position:relative;}
+.rewards-list li:last-child{border-bottom:1px solid #e6e6e6;}
+.rewards-list h3{color:#333;font-size:14px;}
+.rewards-list p{line-height:18px;color:#999;font-size:12px}
+.rewards-list h3+p{margin-top:8px;}
+.rewards-list .income,.rewards-list .pay{position:absolute;right:0;bottom:20px;font-size:16px;color:#8ac249}
+.rewards-list .pay{color:#fe9700}
+.rewards-list .income i,.rewards-list .pay i{font-size:12px;margin-right:5px}
+
+.helper{padding:10px 3%;}
+.helper dt,.helper dd{color:#333;font-size:12px;margin-top:10px}
+.helper dd{color:#999;line-height:20px;margin-top:8px;}
+
+.no-list{display: none;background:url(./img/no_rewards.png) no-repeat center 55px;background-size:100px auto;padding-top:155px;height:100%;text-align:center;}
+.no-list p{color:#999;font-size:14px}
+.no-list .btn{color:#ff608e;font-size:14px;border:1px solid #ff608e;border-radius:5px;height:35px;line-height:35px;width:135px;display:block;margin:35px auto;}
+
+@media screen and (min-width:360px){
+	.tab-list .info .price{font-size:16px;}
+	.tab-list .info .cashback{margin-left:10px;}
+}
