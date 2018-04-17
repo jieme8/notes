@@ -1,0 +1,15 @@
+{
+  "name": "mandMobile",
+  "version": "1.0.0",
+  "description": "Mand Mobile - 基于金融场景的Vuejs组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mand-mobile": "^1.0.4"
+  }
+}
