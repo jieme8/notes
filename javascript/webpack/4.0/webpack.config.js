@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");   //生成html
 const ExtractTextWebapckPlugin = require("extract-text-webpack-plugin"); //css单独文件
 module.exports = {
     entry:{
-        "list":"./src/list/index.js",
-        "info":"./src/info/index.js"
+        "list":"./src/index/index.js",
     },
     output:{
         path: path.resolve(__dirname,'dist'),
@@ -35,10 +34,9 @@ module.exports = {
 
         //css文件分离
         new ExtractTextWebapckPlugin('[name].css'),
-        //产出html
-
+        // 产出html
         new HtmlWebpackPlugin({
-            template: "./src/info/index.html",//模板
+            template: "./src/index/index.html",//模板
             filename:'index.html',
             // chunks:['index'],
             hash:true,//防止缓存
@@ -48,6 +46,11 @@ module.exports = {
         })
         
     ],
+    resolve : {
+        modules : [
+            path.resolve(__dirname, "./lib")
+        ]
+    },
     devServer:{//配置此静态文件服务器，可以用来预览打包后项目
         contentBase:path.resolve(__dirname,'dist'),//开发服务运行时的文件根目录
         host:'localhost',//主机地址
