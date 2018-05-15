@@ -7,6 +7,7 @@ module.exports = {
         "list":"./src/index/index.js",
     },
     output:{
+        // publicPath:"/dist", //全局路径
         path: path.resolve(__dirname,'dist'),
         filename:'[name].js'
     },

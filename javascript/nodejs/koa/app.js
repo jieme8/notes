@@ -1,49 +1,51 @@
-var koa = require('koa');
-var path = require('path');
-var logger = require('koa-logger');         //日志
-var staticServer = require('koa-static');   //静态文件模块
-var render = require('koa-ejs');            //ejs
-var router = require('koa-router');         //路由
+const Koa = require('koa');
+const app = new Koa();
+const router = require('koa-router')();
+const views = require('koa-views');       //koa模版引擎
+const co = require('co');
+const convert = require('koa-convert');
+const json = require('koa-json');
+const onerror = require('koa-onerror');
+const bodyparser = require('koa-bodyparser')();
+const logger = require('koa-logger');
 
-var app = new koa();
-var myRouter = new router();
-
-
-app.use(logger());
-
-// app.use(staticServer(path.join(__dirname,'public')));
-
-app.use(myRouter.routes())
-// render(app, {
-//   root: path.join(__dirname, 'views'),
-//   layout: '__layout',
-//   viewExt: 'html',
-//   cache: false,
-//   debug: true
-// });
-// app.use(function *(){
-//   yield this.render('index',{layout:false});
-// });
+const index = require('./routes/index');
+const users = require('./routes/users');
 
 
+// middlewares
+app.use(convert(bodyparser));
+app.use(convert(json()));
+app.use(convert(logger()));
+app.use(convert(require('koa-static')(__dirname + '/public')));
 
-myRouter.get("/",function *(id,next){
-  // yield this.render();
-  // yield this.send("123123123")
-  console.log('12312312312123123');
-  yield this.body = "123123";
-})
-// app.use(myRouter.routes());
+app.use(views(__dirname + '/views', {
+  extension: 'jade'
+}));
 
-// app.use(async ctx => {
-//   // console.log(ctx.query);
-//   ctx.cookies.set("aaaaa", "bbbbb")
-//   ctx.body = 'Hello World';
-// });
+// app.use(views(__dirname + '/views-ejs', {
+//   extension: 'ejs'
+// }));
 
-// 错误处理
-app.on('error', (err, ctx) => {
-  log.error('server error', err, ctx)
+
+// logger
+app.use(async (ctx, next) => {
+  const start = new Date();
+  await next();
+  const ms = new Date() - start;
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-app.listen(3000);
+router.use('/', index.routes(), index.allowedMethods());
+router.use('/users', users.routes(), users.allowedMethods());
+
+app.use(router.routes(), router.allowedMethods());
+// response
+
+app.on('error', function(err, ctx){
+  console.log(err)
+  log.error('server error', err, ctx);
+});
+
+
+module.exports = app;
