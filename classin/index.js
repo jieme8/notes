@@ -1,6 +1,6 @@
 let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=getCourseList';
 let request = require("request");
-let notesConfig = require("../notesConfig");
+let notesConfig = require("../config/notesConfig");
 let crypto = require('crypto');
 let md5 = crypto.createHash('md5');
 let timeStamp = parseInt(new Date().getTime()/1000);
