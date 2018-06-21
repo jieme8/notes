@@ -1,0 +1,3 @@
+[submodule "config"]
+	path = config
+	url = git@code.aliyun.com:jieme8/config.git
