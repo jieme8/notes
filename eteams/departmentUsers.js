@@ -6,7 +6,7 @@ let ac = require("./access_token");
 (async () => {
     try{
         let access_token = await ac();
-        let url = `https://api.eteams.cn/user/v1/departmentUsers?status=normal&depid=4531676596659795849&fetch_child=1&access_token=${access_token}`;
+        let url = `https://api.eteams.cn/user/v1/departmentUsers?status=normal&depid=4971670321887266133&fetch_child=1&access_token=${access_token}`;
 
         request({
             url: url,
