@@ -1,36 +1,17 @@
+//获取部门列表
 let request = require("request");
 let notesConfig = require("../config/notesConfig");
 let ac = require("./access_token");
 
-var p =  {
-    "pageNo": "1",
-    "pageSize": "15",
-    "orderPropertyName": "name",
-    "asc": "true",
-    "conditions": [
-        {
-            "propertyName": "name",
-            "compareType": "like",
-            "propertyValue": "tt"
-        }
-    ]
-}
-
-var pp = JSON.stringify(p);
-
-
 (async () => {
     try{
         let access_token = await ac();
-        let url = `https://api.eteams.cn/crm/v1/search?access_token=${access_token}
-&userid=18677738941&module=customer&query=${pp}`;
-        console.log(pp);
-        console.log(url);
+        let url = `https://api.eteams.cn/department/v1/list?access_token=${access_token}`;
 
         request({
-        url: url,
-        method: 'GET',
-        json: true,
+            url: url,
+            method: 'GET',
+            json: true,
 
         },function (err, response, body) {
             if(err){
