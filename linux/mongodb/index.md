@@ -2,14 +2,15 @@
 
 
 ## 登陆mongodb
-    mongo 10.66.116.135:27017
+    mongo 192.168.11.23:27017
 
 ## 创建用户
     use crm
     db.createUser({
         user: "db",
         pwd: "123456",
-        roles: [ { role: "readWrite", db: "crm" } ]})
+        roles: [ { role: "readWrite", db: "crm" } ]
+    })
 
 ## mongodb role类型
 
