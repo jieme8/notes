@@ -3,17 +3,17 @@ let notesConfig = require("../config/notesConfig");
 let ac = require("./access_token");
 
 var p =  {
-    "pageNo": "1",
-    "pageSize": "15",
-    "orderPropertyName": "name",
-    "asc": "true",
-    "conditions": [
-        {
-            "propertyName": "name",
-            "compareType": "like",
-            "propertyValue": "tt"
-        }
-    ]
+    // "pageNo": "1",
+    // "pageSize": "15",
+    // "orderPropertyName": "name",
+    // "asc": "true",
+    // "conditions": [
+    //     {
+    //         "propertyName": "name",
+    //         "compareType": "like",
+    //         "propertyValue": "tt"
+    //     }
+    // ]
 }
 
 var pp = JSON.stringify(p);
@@ -39,7 +39,7 @@ var pp = JSON.stringify(p);
                 console.log(`访问地址：${response.request.uri.href}`);
                 console.log(`状态吗：${response.statusCode}`);
                 console.log(body);
-                
+                console.log(body.data.data[0]);
             }
         });
     }catch(e){
