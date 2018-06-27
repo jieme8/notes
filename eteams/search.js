@@ -3,17 +3,7 @@ let notesConfig = require("../config/notesConfig");
 let ac = require("./access_token");
 
 var p =  {
-    // "pageNo": "1",
-    // "pageSize": "15",
-    // "orderPropertyName": "name",
-    // "asc": "true",
-    // "conditions": [
-    //     {
-    //         "propertyName": "name",
-    //         "compareType": "like",
-    //         "propertyValue": "tt"
-    //     }
-    // ]
+    "asc": "false",
 }
 
 var pp = JSON.stringify(p);
