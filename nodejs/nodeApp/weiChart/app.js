@@ -1,3 +1,5 @@
+//微信公众号验证 https://juejin.im/post/5b403977e51d45191d79ba5a?utm_source=gold_browser_extension
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
