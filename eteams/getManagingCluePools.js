@@ -13,15 +13,14 @@ var pp = JSON.stringify(p);
 (async () => {
     try{
         let access_token = await ac();
-        let url = `https://api.eteams.cn/crm/v1/getManagingCluePools?access_token=${access_token}&userid=${notesConfig.eteams.user_id}`;
+        let url = `https://api.eteams.cn/crm/v1/getManagingCluePools?access_token=${access_token}&userid=${notesConfig.eteams.user_id}&module`;
         console.log(pp);
         console.log(url);
 
         request({
-        url: url,
-        method: 'GET',
-        json: true,
-
+            url: url,
+            method: 'GET',
+            json: true,
         },function (err, response, body) {
             if(err){
                 console.error(err);
