@@ -1,0 +1,17 @@
+{
+  "name": "koa-better-body",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-better-body": "^3.0.4",
+    "koa-convert": "^1.2.0"
+  }
+}

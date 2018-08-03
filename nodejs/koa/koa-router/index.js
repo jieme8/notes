@@ -22,3 +22,5 @@ router.use('/page',page.routes(),page.allowedMethods());
 //加载路由中间件
 app.use(router.routes()).use(router.allowedMethods());
 app.listen(3000);
+
+//访问 http://127.0.0.1:3000/home/list
