@@ -1,3 +1,5 @@
+
+//通过/arcicle/id/name传参
 let Koa = require('koa');
 let app = new Koa();
 let Router = require('koa-router');
