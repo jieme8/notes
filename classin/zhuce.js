@@ -11,7 +11,7 @@ let form = {
     SID:notesConfig.classin.SID,
     safeKey:safeKey,
     timeStamp:timeStamp,
-    telephone:"18922334567",
+    telephone:"18611100111",
     nickname:"aaaa",
     password:"123456",
 
