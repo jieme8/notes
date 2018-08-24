@@ -27,8 +27,14 @@
     setrange name ll bbb
     get name
 
+### 5.获取key对应的value值(nil)
+    get [name]
+
 
 ## 查看redis连接数(connected_clients:158)
     info clients
+
+## 获取keys
+    keys *
 
 ## 使用
