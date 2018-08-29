@@ -1,4 +1,4 @@
-let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=addCourse';
+let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=delCourseStudent';
 let request = require("request");
 let notesConfig = require("../config/notesConfig");
 let crypto = require('crypto');
@@ -11,13 +11,11 @@ let form = {
     SID:notesConfig.classin.SID,
     safeKey:safeKey,
     timeStamp:timeStamp,
-    courseName:"demo课node"
+    courseId:"4109731",
+    identity:1,
+    studentAccount:"18001758301"
 }
-
 console.log(form);
-
-
-
 
 request({
 	url: url,
