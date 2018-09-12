@@ -1,5 +1,4 @@
-//更换老师
-let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=modifyCourseTeacher';
+let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=getCourseList';
 let request = require("request");
 let notesConfig = require("../config/notesConfig");
 let crypto = require('crypto');
@@ -12,8 +11,8 @@ let form = {
     SID:notesConfig.classin.SID,
     safeKey:safeKey,
     timeStamp:timeStamp,
-    courseId:"4382699",
-    teacherAccount:"18621371106"
+    courseStatus:4,
+    perpage:100,
 
 }
 
