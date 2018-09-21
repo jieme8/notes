@@ -1,4 +1,4 @@
-let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=delCourse';
+let url  = 'http://www.eeo.cn/partner/api/course.api.php?action=endCourse';
 let request = require("request");
 let notesConfig = require("../config/notesConfig");
 let crypto = require('crypto');
