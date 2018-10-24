@@ -1,7 +1,7 @@
 //获取部门列表
 let request = require("request");
 let notesConfig = require("../config/notesConfig");
-let ac = require("./access_token");
+let ac = require("../access_token");
 
 (async () => {
     try{
@@ -28,7 +28,7 @@ let ac = require("./access_token");
                         "name": "已购买"
                     }
                 },
-                
+
 
             }
         },function (err, response, body) {
