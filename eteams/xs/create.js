@@ -16,7 +16,7 @@ let ac = require("../access_token");
                 access_token:access_token,
                 corp_id:notesConfig.eteams.corp_id,
                 userid:"L34Qf6f569b5af26285e4d74fad8",
-                module:"customer",
+                module:"clue",
                 id:11111,
                 entity:{
                     id:"6481981483790252579",
@@ -24,9 +24,39 @@ let ac = require("../access_token");
                     manager:{
                         name:"胡杰"
                     },
+                    clueSource:{
+                        name: "测试注册"
+                    },
+                    "clueContact": "李四",
+                    "clueIndustry": {
+                        "name": "行业"
+                    },
+                    "clueRegion": {
+
+                        "name": "四川"
+            
+                    },
+                    "clueTelephone": "02888888888",
+
+        "cluePhoneNumber": "13888888888",
+
+        "clueSex": "2",
+
+        "clueEmail": "test@qq.com",
+
+        "clueAddress": "莱蒙都会",
                     customerStatus:{
                         "name": "已购买"
-                    }
+                    },
+                    "clueProcessResult": "成功了",
+
+        "clueDescription": "测试",
+
+        "cluePool": {
+
+            "name": "销售线索池"
+
+        }
                 },
 
 
@@ -43,6 +73,4 @@ let ac = require("../access_token");
         console.error(e);
     }
 })();
-
-
 
