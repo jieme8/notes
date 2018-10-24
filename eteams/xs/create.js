@@ -12,7 +12,7 @@ let ac = require("../access_token");
             "corp_id": notesConfig.eteams.corp_id,
             "userid": "L34Qf6f569b5af26285e4d74fad8",
             "module": "clue",
-            "entity": {
+            "entity": JSON.stringify({
                 "name": "tt",
                 "manager": {
                     "name": "吴昊"
@@ -41,11 +41,11 @@ let ac = require("../access_token");
                 "cluePool": {
                     "name": "测试线索池"
                 }
-            }
+            })
         }
         console.log(url);
         console.log(body);
-        request.post({url:url, form:{key:body}}, function(error, response, body) {
+        request.post({url:url, form:body}, function(error, response, body) {
             console.log(body);
         })
 
