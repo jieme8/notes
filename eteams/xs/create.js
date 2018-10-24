@@ -39,7 +39,7 @@ let ac = require("../access_token");
                 "clueProcessResult": "成功了",
                 "clueDescription": "测试",
                 "cluePool": {
-                    "name": "销售线索池"
+                    "name": "测试线索池"
                 }
             }
         }
