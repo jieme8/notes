@@ -15,12 +15,12 @@ let ac = require("../access_token");
             "entity": {
                 "name": "tt",
                 "manager": {
-                    "name": "胡杰"
+                    "name": "吴昊"
                 },
                 "clueSource": {
-                    "name": "网站注册"
+                    "name": "baidu"
                 },
-                "clueContact": "李四",
+                "clueContact": "吴昊",
                 "clueIndustry": {
                     "name": "计算机"
                 },
