@@ -15,12 +15,12 @@ let ac = require("../access_token");
             "entity": JSON.stringify({
                 "name": "tt",
                 "manager": {
-                    "name": "吴昊"
+                    "name": "胡杰"
                 },
                 "clueSource": {
-                    "name": "baidu"
+                    "name": "搜索引擎"
                 },
-                "clueContact": "吴昊",
+                "clueContact": "胡杰",
                 "clueIndustry": {
                     "name": "待定"
                 },
@@ -34,7 +34,7 @@ let ac = require("../access_token");
 
                 "clueAddress": "浦东新区",
                 "clueFollowStatus": {
-                    "name": "客户有意向"
+                    "name": "待处理"
                 },
                 "clueProcessResult": "成功了",
                 "clueDescription": "测试",
