@@ -20,7 +20,7 @@ let ac = require("../access_token");
                 "clueSource": {
                     "name": "搜索引擎"
                 },
-                "clueContact": "胡杰",
+                "clueContact": "testsssss",
                 "clueIndustry": {
                     "name": "待定"
                 },
@@ -39,7 +39,7 @@ let ac = require("../access_token");
                 "clueProcessResult": "成功了",
                 "clueDescription": "测试",
                 "cluePool": {
-                    "name": "测试线索池"
+                    "name": "默认线索池"
                 }
             })
         }
