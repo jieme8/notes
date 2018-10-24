@@ -8,38 +8,39 @@ let ac = require("../access_token");
         let access_token = await ac();
         let url = `https://api.eteams.cn/crm/v1/create?access_token=${access_token}`;
         let body = {
-            "access_token":access_token,
+            "access_token": access_token,
             "corp_id": notesConfig.eteams.corp_id,
             "userid": "L34Qf6f569b5af26285e4d74fad8",
             "module": "clue",
             "entity": {
-             "name": "tt",
-             "manager": {
-              "username": "boss"
-             },
-             "clueSource": {
-              "name": "网站注册"
-             },
-             "clueContact": "李四",
-             "clueIndustry": {
-              "name": "计算机"
-             },
-             "clueRegion": {
-              "name": "四川"
-             },
-             "clueTelephone": "02888888888",
-             "cluePhoneNumber": "13888888888",
-             "clueSex": "2",
-             "clueEmail": "test@qq.com",
-             "clueAddress": "莱蒙都会",
-             "clueFollowStatus": {
-              "name": "客户有意向"
-             },
-             "clueProcessResult": "成功了",
-             "clueDescription": "测试",
-             "cluePool": {
-              "name": "测试线索池"
-             }
+                "name": "tt",
+                "manager": {
+                    "name": "boss"
+                },
+                "clueSource": {
+                    "name": "网站注册"
+                },
+                "clueContact": "李四",
+                "clueIndustry": {
+                    "name": "计算机"
+                },
+                "clueRegion": {
+                    "name": "四川"
+                },
+                "clueTelephone": "02888888888",
+                "cluePhoneNumber": "13888888888",
+                "clueSex": "2",
+                "clueEmail":"test@qq.com",
+
+                "clueAddress": "莱蒙都会",
+                "clueFollowStatus": {
+                    "name": "客户有意向"
+                },
+                "clueProcessResult": "成功了",
+                "clueDescription": "测试",
+                "cluePool": {
+                    "name": "销售线索池"
+                }
             }
         }
         console.log(url);
@@ -61,3 +62,6 @@ let ac = require("../access_token");
         console.error(e);
     }
 })();
+
+
+
