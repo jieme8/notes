@@ -15,7 +15,7 @@ let ac = require("../access_token");
             "entity": {
                 "name": "tt",
                 "manager": {
-                    "name": "boss"
+                    "name": "胡杰"
                 },
                 "clueSource": {
                     "name": "网站注册"
