@@ -45,19 +45,24 @@ let ac = require("../access_token");
         }
         console.log(url);
         console.log(body);
-        request({
-            url: url,
-            method: 'POST',
-            json: true,
-            from:body
-        },function (err, response, body) {
-            if(err){
-                console.error(err);
-            }else{
-                console.log(`状态吗：${response.statusCode}`);
-                console.log(body);
-            }
-        });
+        request.post({url:url, form:body}, function(error, response, body) {
+            console.log(body);
+        })
+
+
+        // request({
+        //     url: url,
+        //     method: 'POST',
+        //     json: true,
+        //     from:body
+        // },function (err, response, body) {
+        //     if(err){
+        //         console.error(err);
+        //     }else{
+        //         console.log(`状态吗：${response.statusCode}`);
+        //         console.log(body);
+        //     }
+        // });
     }catch(e){
         console.error(e);
     }
