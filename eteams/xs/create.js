@@ -15,7 +15,7 @@ let ac = require("../access_token");
             "entity": JSON.stringify({
                 "name": "tt",
                 "manager": {
-                    "name": "胡杰"
+                    "name": "吴昊"
                 },
                 "clueSource": {
                     "name": "搜索引擎"
