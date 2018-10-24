@@ -22,17 +22,17 @@ let ac = require("../access_token");
                 },
                 "clueContact": "吴昊",
                 "clueIndustry": {
-                    "name": "计算机"
+                    "name": "待定"
                 },
                 "clueRegion": {
                     "name": "上海"
                 },
-                "clueTelephone": "02888888888",
-                "cluePhoneNumber": "13888888888",
+                "clueTelephone": "13799887766",
+                "cluePhoneNumber": "13799887766",
                 "clueSex": "2",
                 "clueEmail":"test@qq.com",
 
-                "clueAddress": "莱蒙都会",
+                "clueAddress": "浦东新区",
                 "clueFollowStatus": {
                     "name": "客户有意向"
                 },
