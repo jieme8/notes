@@ -12,7 +12,7 @@ let ac = require("../access_token");
             url: url,
             method: 'POST',
             json: true,
-            form:{
+            body:{
                 access_token:access_token,
                 corp_id:notesConfig.eteams.corp_id,
                 userid:"L34Qf6f569b5af26285e4d74fad8",
