@@ -25,7 +25,7 @@ let ac = require("../access_token");
                     "name": "计算机"
                 },
                 "clueRegion": {
-                    "name": "四川"
+                    "name": "上海"
                 },
                 "clueTelephone": "02888888888",
                 "cluePhoneNumber": "13888888888",
@@ -49,7 +49,7 @@ let ac = require("../access_token");
             url: url,
             method: 'POST',
             json: true,
-            form:body
+            body:body
         },function (err, response, body) {
             if(err){
                 console.error(err);
