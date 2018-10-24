@@ -1,6 +1,6 @@
 //获取部门列表
 let request = require("request");
-let notesConfig = require("../config/notesConfig");
+let notesConfig = require("../../config/notesConfig");
 let ac = require("../access_token");
 
 (async () => {
