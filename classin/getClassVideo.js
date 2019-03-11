@@ -11,8 +11,8 @@ let form = {
     SID:notesConfig.classin.SID,
     safeKey:safeKey,
     timeStamp:timeStamp,
-    courseId:"7203367",
-    classId:"33654539"
+    courseId:"7565311",
+    classId:"35979751"
 
 }
 
